@@ -113,6 +113,12 @@ docker-build-all:
 					-v "$(CURDIR):/solo" \
 				    $(DOCKER_TOOLCHAIN_IMAGE) "./in-docker-build.sh" ${VERSION_FULL}
 
+docker-shell: 
+	docker run -ti --rm -v "$(CURDIR)/builds:/builds" \
+					-v "$(CURDIR):/solo" \
+					-v "$(CURDIR)/docker/root:/root" \
+				    $(DOCKER_TOOLCHAIN_IMAGE) /bin/bash
+
 CPPCHECK_FLAGS=--quiet --error-exitcode=2
 
 cppcheck:
