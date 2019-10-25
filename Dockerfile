@@ -35,3 +35,6 @@ RUN set -eux; \
 
 # solo-python (Python3.7 script for merging etc.)
 RUN pip install -U solo-python
+
+ENV PATH="/opt/gcc-arm-none-eabi-8-2019-q3-update/bin:${PATH}"
+WORKDIR /solo

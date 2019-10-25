@@ -111,7 +111,7 @@ uncached-docker-build-toolchain:
 docker-build-all: 
 	docker run --rm -v "$(CURDIR)/builds:/builds" \
 					-v "$(CURDIR):/solo" \
-				    $(DOCKER_TOOLCHAIN_IMAGE) "solo/in-docker-build.sh" ${VERSION_FULL}
+				    $(DOCKER_TOOLCHAIN_IMAGE) "./in-docker-build.sh" ${VERSION_FULL}
 
 CPPCHECK_FLAGS=--quiet --error-exitcode=2
 

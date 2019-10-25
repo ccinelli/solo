@@ -3,7 +3,7 @@ version=$1
 
 export PREFIX=/opt/gcc-arm-none-eabi-8-2019-q3-update/bin/
 
-cd /solo/targets/stm32l432
+cd targets/stm32l432
 
 make cbor
 
